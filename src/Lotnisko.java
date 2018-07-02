@@ -41,10 +41,4 @@ public class Lotnisko {
         return odlegloscDoLotniska;
     }
 
-    @Override
-    public String toString() {
-        return "Lotnisko{" +
-                "name='" + name + '\'' +
-                '}';
-    }
 }

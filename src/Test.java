@@ -9,21 +9,23 @@ public class Test {
         Lotnisko.setLotniska();
         int iloscWatkow = 10;
         Runnable[] latanie = new Runnable[iloscWatkow];
-        Thread[] threads = new Thread[iloscWatkow];
+        //  Thread[] threads = new Thread[iloscWatkow];
 
         for (int i = 0; i < iloscWatkow; i++) {
             latanie[i] = new Latanie(i);
-            threads[i] = new Thread(latanie[i]);
-            threads[i].start();
+
+
+            //     threads[i] = new Thread(latanie[i]);
+            //   threads[i].start();
         }
 
-        while(true){
-     //       generujRaport()
-
-
+        while (true) {
+            for (int i = 0; i < iloscWatkow; i++) {
+                latanie[i] = new Latanie(i);
+                Latanie lat = (Latanie) latanie[i];
+                System.out.println("RAPORT --------- " + lat.samolot.getID());
+            }
         }
-
-
     }
 
 

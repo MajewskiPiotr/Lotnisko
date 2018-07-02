@@ -28,11 +28,11 @@ public class Samolot {
         while (!dolecial) {
             if (obecnyStanPaliwa > 0) {
                 if (lec() > 0) {
-                    System.out.println("samolot id: " + getID() + " lece " + "do " + destination + " pozostalo mi " + odlegloscDoLotniska);
+                  //  System.out.println("samolot id: " + getID() + " lece " + "do " + destination + " pozostalo mi " + odlegloscDoLotniska);
 
                 } else {
                     dolecial = true;
-                    System.out.println("samolot id: " + getID() + " dolecialem");
+                //    System.out.println("samolot id: " + getID() + " dolecialem");
                 }
 
             } else if (obecnyStanPaliwa <= 0) {
@@ -48,8 +48,8 @@ public class Samolot {
     }
 
     public void rozbij() {
-        System.out.println("Kraksa **********************************************");
-        System.out.println("samolot id: " + getID() + " rozbił sie z braku paliwa");
+      //  System.out.println("Kraksa **********************************************");
+     //   System.out.println("samolot id: " + getID() + " rozbił sie z braku paliwa");
         spadl = true;
         setRunning(false);
         Thread.currentThread().stop();
@@ -62,8 +62,8 @@ public class Samolot {
         }
         destination = nowaDestynacja;
         odlegloscDoLotniska = destination.getOdlegloscDoLotniska();
-        System.out.println("Destnacja: " + destination.name);
-        System.out.println("Odleglosc: " + destination.getOdlegloscDoLotniska());
+     //   System.out.println("Destnacja: " + destination.name);
+    //    System.out.println("Odleglosc: " + destination.getOdlegloscDoLotniska());
     }
 
     public int lec() {
@@ -80,7 +80,7 @@ public class Samolot {
     }
 
     public void koluj() {
-        System.out.println("Kołuje ********************************************");
+    //    System.out.println("Kołuje ********************************************");
         obecnyStanPaliwa = obecnyStanPaliwa - predkosc;
 
         try {
@@ -95,12 +95,12 @@ public class Samolot {
     }
 
     public void zatankuj() {
-        System.out.println("samolot id : " + getID() + " Tankuje");
+      //  System.out.println("samolot id : " + getID() + " Tankuje");
         setObecnyStanPaliwa(getMaxStanPaliwa());
     }
 
     public void laduj(Lotnisko lotnisko) {
-        System.out.println("LADUJE ********************************************");
+      //  System.out.println("LADUJE ********************************************");
         while (lotnisko.isPasZajety) {
             koluj();
         }
@@ -123,8 +123,8 @@ public class Samolot {
     }
 
     public void getStatus() {
-        System.out.println("obecny stawn paliwa " + getObecnyStanPaliwa());
-        System.out.println("destination " + destination);
+      //  System.out.println("obecny stawn paliwa " + getObecnyStanPaliwa());
+     //   System.out.println("destination " + destination);
     }
 
     public boolean isRunning() {
