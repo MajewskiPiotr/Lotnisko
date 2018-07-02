@@ -19,6 +19,7 @@ public class Latanie implements Runnable {
     @Override
     public void run() {
         samolot = new Samolot(id);
+
         while (samolot.isRunning) {
             try {
                 samolot.dzialaj();

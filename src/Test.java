@@ -4,29 +4,19 @@ import java.util.Random;
 public class Test {
 
 
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args) throws ClassNotFoundException, InterruptedException {
 
         Lotnisko.setLotniska();
-        int iloscWatkow = 10;
+        int iloscWatkow = 11;
         Runnable[] latanie = new Runnable[iloscWatkow];
-        //  Thread[] threads = new Thread[iloscWatkow];
+        latanie[0] = new RaportRunable(0);
 
-        for (int i = 0; i < iloscWatkow; i++) {
+        for (int i = 1; i < iloscWatkow; i++) {
             latanie[i] = new Latanie(i);
 
-
-            //     threads[i] = new Thread(latanie[i]);
-            //   threads[i].start();
         }
 
-        while (true) {
-            for (int i = 0; i < iloscWatkow; i++) {
-                latanie[i] = new Latanie(i);
-                Latanie lat = (Latanie) latanie[i];
-                System.out.println("RAPORT --------- " + lat.samolot.getID());
-            }
-        }
     }
-
-
 }
+
+
