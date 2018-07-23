@@ -6,7 +6,7 @@ Thread thread;
     public RaportRunable(int id) {
         this.id = id;
         thread = new Thread(this, String.valueOf(id));
-        thread.run();
+        thread.start();
 
     }
 

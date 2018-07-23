@@ -5,7 +5,7 @@ public class Latanie implements Runnable {
     private int id;
     boolean spadl;
     Thread thread;
-    Samolot samolot;
+    public Samolot samolot;
 
     public Latanie(int id) {
         this.id = id;

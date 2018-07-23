@@ -20,9 +20,7 @@ public class Lotnisko {
     public static void setLotniska() {
 
         for (int i = 0; i < nazwy.length; i++) {
-
             lotniska.add(new Lotnisko(nazwy[i]));
-
         }
         System.out.println(lotniska.toString());
     }

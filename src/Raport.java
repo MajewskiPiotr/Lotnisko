@@ -18,9 +18,9 @@ public class Raport {
     public static void getRaport() {
         for (Samolot lista : listaSamolotwo) {
             System.out.println("///////////////////////////////////");
-            System.out.println(lista.id);
-            System.out.println(lista.destination);
-            System.out.println(lista.obecnyStanPaliwa);
+            System.out.println(lista.getID());
+            System.out.println(lista.getDestination());
+            System.out.println(lista.getObecnyStanPaliwa());
             System.out.println("///////////////////////////////////");
         }
 
